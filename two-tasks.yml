@@ -1,0 +1,18 @@
+---
+- name: my test playbook
+  hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: installing pkg
+      yum:
+       name: httpd
+       state: installed
+    
+    - name: start service
+      service:
+        name: httpd
+        state: started
+
+

@@ -1,0 +1,11 @@
+--- # my test playbook
+- hosts: all
+  user: ansible
+  become: true
+  connection: ssh
+  tasks:
+    - name: installing tree software on webservers
+      action: yum pkg=tree state=present
+
+    - name: installing mysql software on dbservers
+      action: yum pkg=mysql state=present

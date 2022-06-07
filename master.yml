@@ -1,0 +1,18 @@
+--- # testing roles
+- hosts: all
+  user: ansible
+  connection: ssh
+  become: yes
+  roles:
+    - testrole:
+          tasks:
+            yum:
+             name: httpd
+             state: present
+
+          vars:
+
+
+
+           handlers:  
+

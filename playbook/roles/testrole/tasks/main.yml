@@ -1,0 +1,2 @@
+- nmae: installing httpd s/w into hosts
+  yum: pkg=httpd state=latest

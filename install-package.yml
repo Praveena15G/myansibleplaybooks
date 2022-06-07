@@ -1,0 +1,12 @@
+--- # s/w installation
+- name: I would like to install s/w
+  hosts: all
+  user: ansible
+  become: true
+  connection: ssh
+  tasks:
+    - name: install s/w into hosts
+      yum: 
+        name: git
+        state: present
+

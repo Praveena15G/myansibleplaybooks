@@ -1,0 +1,13 @@
+--- # installing multiple software
+- name: my loops playbook
+  hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: install packages
+      yum:
+        name: ['git', 'httpd' , 'docker' , 'tree' , 'mysql' , 'java']
+        state: installed
+
+    

@@ -1,0 +1,10 @@
+--- # testing toles
+- hosts: all
+  user: ansible
+  become: true
+  connection: ssh
+ 
+  roles:
+    - testrole: 
+        tasks:
+
